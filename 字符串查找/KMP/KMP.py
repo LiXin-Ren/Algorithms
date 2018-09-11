@@ -5,6 +5,7 @@ def GetNext(p):
     j = 0
 
     while(j < n - 1):
+        # k初始为next[j-1]
         if k == -1 or p[k] == p[j]:
             k += 1
             j += 1
@@ -13,6 +14,7 @@ def GetNext(p):
             k = next[k]
     return next
 
+# 改进的next获取方式
 def GetNextval(p):
     n = len(p)
     next = [-1] * n
@@ -53,8 +55,6 @@ def KmpSearch(s, p):
         return i - j
     else:
         return -1
-
-
 
 
 s = 'BBC ABCDAB ABCDABCDABDE'
